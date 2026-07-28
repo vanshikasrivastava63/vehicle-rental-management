@@ -17,7 +17,13 @@ const vehicleSchema = new mongoose.Schema(
     type: {
       type: String,
       required: true,
-      enum: ["Car", "Bike", "Scooter"]
+      enum: ["Car", "Bike", "SUV"]
+    },
+
+    location: {
+      type: String,
+      required: true,
+      trim: true
     },
 
     pricePerDay: {

@@ -1,12 +1,12 @@
-import express from "express";
+const express = require("express");
 
-import {
+const {
   createVehicle,
   getVehicles,
   getVehicleById,
   updateVehicle,
-  deleteVehicle
-} from "../controllers/vehicleController.js";
+  deleteVehicle,
+} = require("../controllers/vehicleController");
 
 const router = express.Router();
 
@@ -25,4 +25,4 @@ router.put("/:id", updateVehicle);
 // DELETE
 router.delete("/:id", deleteVehicle);
 
-export default router;
+module.exports = router;
